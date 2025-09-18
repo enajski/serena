@@ -1,0 +1,9 @@
+; Test project for Serena's GDScript language server integration.
+config_version=5
+
+[application]
+config/name="Serena GDScript Test"
+run/main_scene="res://main.tscn"
+
+[editor]
+export/convert_v3_world_to_v4=false

@@ -6,6 +6,7 @@ Status of the `main` branch. Changes prior to the next official version change w
   * **Add support for R** via the R languageserver package with LSP integration, performance optimizations, and fallback symbol extraction
   * **Add support for Zig** via ZLS (cross-file references may not fully work on Windows)
   * **Add support for Lua** via lua-language-server
+  * **Add support for GDScript** by integrating Godot's language server (set GODOT_BIN to your Godot executable)
   * **Add support for Nix** requires nixd installation (Windows not supported)
   * **Dart now officially supported**: Dart was always working, but now tests were added, and it is promoted to "officially supported"
   * **Rust now uses already installed rustup**: The rust-analyzer is no longer bundled with Serena. Instead, it uses the rust-analyzer from your Rust toolchain managed by rustup. This ensures compatibility with your Rust version and eliminates outdated bundled binaries.
@@ -20,6 +21,7 @@ Status of the `main` branch. Changes prior to the next official version change w
   * Various fixes related to indexing, special paths and determation of ignored paths
   * Decreased `TOOL_DEFAULT_MAX_ANSWER_LENGTH` to be in accordance with (below) typical max-tokens configurations
   * Allow passing language server specific settings through `ls_specific_settings` field (in `serena_config.yml`)
+  * Document optional Godot environment overrides for the GDScript language server
 
 # 0.1.4
 

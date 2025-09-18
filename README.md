@@ -80,6 +80,7 @@ With Serena, we provide direct, out-of-the-box support for:
   * TypeScript/Javascript
   * PHP (uses Intelephense LSP; set `INTELEPHENSE_LICENSE_KEY` environment variable for premium features)
   * Go (requires installation of gopls)
+  * GDScript (requires Godot 3.5+ or newer; set GODOT_BIN to your Godot executable)
   * R (requires installation of the `languageserver` R package)
   * Rust (requires [rustup](https://rustup.rs/) - uses rust-analyzer from your toolchain)
   * C/C++ (you may experience issues with finding references, we are working on it)
@@ -100,6 +101,13 @@ With Serena, we provide direct, out-of-the-box support for:
 
 Support for further languages can easily be added by providing a shallow adapter for a new language server implementation,
 see Serena's [memory on that](.serena/memories/adding_new_language_support_guide.md).
+
+#### GDScript configuration hints
+
+When Serena launches Godot it honours a few optional overrides so you can match custom setups:
+
+- `SERENA_GODOT_LSP_ARGS` (or `GODOT_LSP_ARGS`) appends extra CLI flags before the Godot process starts. Use this if your project relies on additional editor arguments, alternative config directories, or feature toggles.
+- `SERENA_GODOT_LSP_TRANSPORT` (or `GODOT_LSP_TRANSPORT`) forces the connection mode. Set it to `stdio`, `tcp`, or `auto` when you need to override the auto-detection—for example, with community Godot builds that expose only the TCP LSP endpoint.
 
 ### Community Feedback
 
